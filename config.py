@@ -1,7 +1,8 @@
-# iFlow API 配置
-IFLOW_API_KEY = "sk-84b4da9285653b3ca24d77b564292be7"
-IFLOW_API_URL = "https://api.iflowai.com/v1/chat/completions"
+import os
 
+# iFlow API 配置
+IFLOW_API_KEY = os.environ.get("IFLOW_API_KEY", "your_iFlow_api_key_here")
+IFLOW_API_URL = "https://api.iflowai.com/v1/chat/completions"
 # 模型配置
 MODEL = "glm-5"
 
@@ -54,3 +55,4 @@ BIOSTAT_PLOTS = [
     "生存曲线",
     "ROC曲线"
 ]
+
